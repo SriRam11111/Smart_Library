@@ -1,12 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
-import Home from '../components/homefolder/home';
 import './navbar.css'
-import Register from '../components/REGISTER/register';
-import Sign_in from '../components/signin/sign_in';
-import Contact from '../components/contactfolder/contact';
-import About from '../components/aboutfolder/about';
-import Branches from '../components/branches/branches';
+import {Home,Register,Sign_in,Contact,About,Branches} from './index'
 
 
 

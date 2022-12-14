@@ -1,6 +1,7 @@
 import React from 'react';
 // import Register from './registration';
 import { useState } from "react";
+import {Redirect} from 'react-router-dom';
 import './signin.css'
 /**
  * page to sign into the website
@@ -10,6 +11,7 @@ function Sign_in() {
 
   const [uid, setUid] = useState("")
   const [password, setPassword] = useState("")
+  const [loginSucessful, setLoginSucessful] = useState(false)
 
   const handleInput = (event) => {
     switch (event.target.name) {
@@ -25,11 +27,15 @@ function Sign_in() {
         // code block
     }
   }
+  if(loginSucessful){
+    return <Redirect to="/books" />
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault()
     console.log(`Submit Clicked ra bhai and value of uid is ${uid}`)
     console.log(`Submit Clicked ra bhai and value of password is ${password}`)
+    setLoginSucessful(true)
     // setformErrors(validatename(username, email, password, repeatPassword))
     event.preventDefault()
 }

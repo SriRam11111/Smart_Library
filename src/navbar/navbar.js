@@ -2,7 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
 import './navbar.css'
 import {Home,Register,Sign_in,Contact,About,Branches} from './index'
-
+import Civil from '../components/branches/civil';
+import Mechanical from '../components/branches/mechanical';
+import Cse from '../components/branches/cse';
+import Ece from '../components/branches/ece';
+import Eee from '../components/branches/eee';
+import Chemical from '../components/branches/chemical';
 
 
 /**
@@ -110,6 +115,12 @@ function NavBar() {
 						<Route path="/contact" component={Contact} />
 						<Route path="/about" component={About} />
 						<Route path="/branches" component={Branches} />
+						<Route path="/civil" component={Civil} />
+						<Route path="/mech" component={Mechanical} />
+						<Route path="/cse" component={Cse} />
+						<Route path="/eee" component={Eee} />
+						<Route path="/chem" component={Chemical} />
+						<Route path="/ece" component={Ece} />
 					</Switch>
 				</div>
 			</Router>

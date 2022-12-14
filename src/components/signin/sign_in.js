@@ -1,7 +1,6 @@
 import React from 'react';
-// import Register from './registration';
 import { useState } from "react";
-import {Redirect} from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import './signin.css'
 /**
  * page to sign into the website
@@ -15,19 +14,19 @@ function Sign_in() {
 
   const handleInput = (event) => {
     switch (event.target.name) {
-        case "uid":
-            setUid(event.target.value)
-            console.log("handle input")
-            break;
-        case "password":
-            setPassword(event.target.value)
-            break;
-       
-        default:
-        // code block
+      case "uid":
+        setUid(event.target.value)
+        console.log("handle input")
+        break;
+      case "password":
+        setPassword(event.target.value)
+        break;
+
+      default:
+      // code block
     }
   }
-  if(loginSucessful){
+  if (loginSucessful) {
     return <Redirect to="/branches" />
   }
 
@@ -38,7 +37,7 @@ function Sign_in() {
     setLoginSucessful(true)
     // setformErrors(validatename(username, email, password, repeatPassword))
     event.preventDefault()
-}
+  }
 
 
   return (
@@ -48,7 +47,7 @@ function Sign_in() {
         <form className="form-signin">
           <div className="row">
             <label htmlFor="name">University Id:</label>
-            <input type="text" id="uid" name="uid"  placeholder="N09XXXX" onChange={handleInput}/>
+            <input type="text" id="uid" name="uid" placeholder="N09XXXX" onChange={handleInput} />
           </div>
           <div className="row">
             <label htmlFor="password">Password</label>

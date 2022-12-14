@@ -4,11 +4,14 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Civil from './civil'
 
 import './branches.css'
-
+/**
+ * function to show branches and to render to seperate branch books
+ * @returns 
+ */
 function Branches() {
   // function civil(){
   //   exact to="/register"
-  // }
+  // }react-router-dom 
 
 
   return (

@@ -15,101 +15,111 @@ import Branches from '../components/branches/branches';
  * @returns 
  */
 function NavBarContent() {
-  const [click, setClick] = React.useState(false);
+	const [click, setClick] = React.useState(false);
 
-  const handleClick = () => setClick(!click);
-  // const Close = () => setClick(false);
+	const handleClick = () => setClick(!click);
+	const Close = () => setClick(false);
 
-  return (
-    <div>
+	return (
+		<div>
+			<div className={click ? "main-container" : ""} onClick={() => Close()} />
+			<nav className="navbar" onClick={e => e.stopPropagation()}>
+				<div className="nav-container">
+					<NavLink exact to="/" className="nav-logo">
+						SmartLibrary
+						<i className="fa fa-code"></i>
+					</NavLink>
+					<ul className={click ? "nav-menu active" : "nav-menu"}>
+						<li className="nav-item">
+							<NavLink
+								exact
+								to="/"
+								activeClassName="active"
+								className="nav-links"
+								onClick={click ? handleClick : null}>
+								Home
+							</NavLink>
+						</li>
 
-      <nav className="navbar" onClick={e => e.stopPropagation()}>
-        <div className="nav-container">
-          <NavLink exact to="/" className="nav-logo">
-            SmartLibrary
-            <i className="fa fa-code"></i>
-          </NavLink>
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/"
-                className="nav-links"              >
-                Home
-              </NavLink>
-            </li>
-
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/register"
-                className="nav-links"
-              >
-                register
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/sign-in"
-                className="nav-links"
-              >
-                signin
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/contact"
-                className="nav-links"
-              >
-                Contact Us
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/about"
-                className="nav-links"
-              >
-                About
-              </NavLink>
-            </li>
-          </ul>
-          <div className="nav-icon" onClick={handleClick}>
-            <i className={click ? "fa fa-times" : "fa fa-bars"}></i>
-          </div>
-        </div>
-      </nav>
-    </ div>
-  );
+						<li className="nav-item">
+							<NavLink
+								exact
+								to="/register"
+								activeClassName="active"
+								className="nav-links"
+								onClick={click ? handleClick : null}
+							>
+								register
+							</NavLink>
+						</li>
+						<li className="nav-item">
+							<NavLink
+								exact
+								to="/sign-in"
+								activeClassName="active"
+								className="nav-links"
+								onClick={click ? handleClick : null}
+							>
+								signin
+							</NavLink>
+						</li>
+						<li className="nav-item">
+							<NavLink
+								exact
+								to="/contact"
+								activeClassName="active"
+								className="nav-links"
+								onClick={click ? handleClick : null}
+							>
+								Contact Us
+							</NavLink>
+						</li>
+						<li className="nav-item">
+							<NavLink
+								exact
+								to="/about"
+								activeClassName="active"
+								className="nav-links"
+								onClick={click ? handleClick : null}
+							>
+								About
+							</NavLink>
+						</li>
+					</ul>
+					<div className="nav-icon" onClick={handleClick}>
+						<i className={click ? "fa fa-times" : "fa fa-bars"}></i>
+					</div>
+				</div>
+			</nav>
+		</ div>
+	);
 }
 
 
 /**
- * function where rendering occcurs
- * @returns 
+ * nav function where rendering occcurs
+ * @returns navbar that appears on the top of page
  */
 function NavBar() {
-  return (
+	return (
 
-    <>
-     
-       <Router>
-        <NavBarContent />
-        <div className="pages">
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/register" component={Register} />
-            <Route path="/sign-in" component={Sign_in} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/about" component={About} />
-            <Route path="/branches" component={Branches} />
-          </Switch>
-        </div>
-      </Router>
-    </>
-  )
+		<>
+
+			<Router>
+				<NavBarContent />
+				<div className="pages">
+					<Switch>
+						<Route exact path="/" component={Home} />
+						<Route path="/register" component={Register} />
+						<Route path="/sign-in" component={Sign_in} />
+						<Route path="/contact" component={Contact} />
+						<Route path="/about" component={About} />
+						<Route path="/branches" component={Branches} />
+					</Switch>
+				</div>
+			</Router>
+		</>
+	)
 }
 
 export default NavBar;

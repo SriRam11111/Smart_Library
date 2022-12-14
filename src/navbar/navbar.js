@@ -6,7 +6,7 @@ import Register from '../components/REGISTER/register';
 import Sign_in from '../components/signin/sign_in';
 import Contact from '../components/contactfolder/contact';
 import About from '../components/aboutfolder/about';
-import Books from '../components/branches/books';
+import Branches from '../components/branches/branches';
 
 
 
@@ -104,7 +104,7 @@ function NavBar() {
             <Route path="/sign-in" component={Sign_in} />
             <Route path="/contact" component={Contact} />
             <Route path="/about" component={About} />
-            <Route path="/books" component={Books} />
+            <Route path="/branches" component={Branches} />
           </Switch>
         </div>
       </Router>

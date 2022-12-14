@@ -28,7 +28,7 @@ function Sign_in() {
     }
   }
   if(loginSucessful){
-    return <Redirect to="/books" />
+    return <Redirect to="/branches" />
   }
 
   const handleSubmit = (event) => {
@@ -55,7 +55,7 @@ function Sign_in() {
             <input type="password" id="name" name="password" onChange={handleInput} />
           </div>
           <button type="submit" onClick={handleSubmit}>Login</button>
-          <p className="mb-0  text-center">Don't have an account? <a href={"#"}>Sign
+          <p className="mb-0  text-center">Don't have an account? <a href="/" value={"any"}>Sign
             Up</a></p>
           <p className="mb-0  text-center">Forgot Password? <a href="forget_password.html">Clich Here</a></p>
         </form>

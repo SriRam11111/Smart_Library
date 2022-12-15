@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
 import './navbar.css'
 import {Home,Register,Sign_in,Contact,About,Branches,
-	Cse,Civil,Eee,Chemical,Ece,Mechanical} from './index'
+	Cse,Civil,Eee,Chemical,Ece,Mechanical,Librarian_login} from './index'
 
 
 
@@ -57,6 +57,17 @@ function NavBarContent() {
 								onClick={click ? handleClick : null}
 							>
 								signin
+							</NavLink>
+						</li>
+						<li className="nav-item">
+							<NavLink
+								exact
+								to="/librarian_login"
+								activeClassName="active"
+								className="nav-links"
+								onClick={click ? handleClick : null}
+							>
+								Librarian_login
 							</NavLink>
 						</li>
 						<li className="nav-item">
@@ -117,6 +128,7 @@ function NavBar() {
 						<Route path="/eee" component={Eee} />
 						<Route path="/chem" component={Chemical} />
 						<Route path="/ece" component={Ece} />
+						<Route path="/librarian_login" component={Librarian_login} />
 					</Switch>
 				</div>
 			</Router>

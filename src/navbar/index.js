@@ -10,6 +10,7 @@ import Cse from '../components/branches/cse';
 import Ece from '../components/branches/ece';
 import Eee from '../components/branches/eee';
 import Chemical from '../components/branches/chemical';
+import Librarian_login from '../components/signin/librarian_login';
 
 
 export {Home,
@@ -17,4 +18,4 @@ Register,
 Sign_in,
 Contact,
 About,
-Branches,Cse,Civil,Eee,Chemical,Ece,Mechanical}
+Branches,Cse,Civil,Eee,Chemical,Ece,Mechanical,Librarian_login}

@@ -1,13 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
 import './navbar.css'
-import {Home,Register,Sign_in,Contact,About,Branches} from './index'
-import Civil from '../components/branches/civil';
-import Mechanical from '../components/branches/mechanical';
-import Cse from '../components/branches/cse';
-import Ece from '../components/branches/ece';
-import Eee from '../components/branches/eee';
-import Chemical from '../components/branches/chemical';
+import {Home,Register,Sign_in,Contact,About,Branches,
+	Cse,Civil,Eee,Chemical,Ece,Mechanical} from './index'
+
 
 
 /**

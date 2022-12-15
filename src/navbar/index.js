@@ -4,10 +4,17 @@ import Sign_in from '../components/signin/sign_in';
 import Contact from '../components/contactfolder/contact';
 import About from '../components/aboutfolder/about';
 import Branches from '../components/branches/branches';
+import Civil from '../components/branches/civil';
+import Mechanical from '../components/branches/mechanical';
+import Cse from '../components/branches/cse';
+import Ece from '../components/branches/ece';
+import Eee from '../components/branches/eee';
+import Chemical from '../components/branches/chemical';
+
 
 export {Home,
 Register,
 Sign_in,
 Contact,
 About,
-Branches}
+Branches,Cse,Civil,Eee,Chemical,Ece,Mechanical}

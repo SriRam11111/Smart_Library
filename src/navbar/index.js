@@ -11,6 +11,8 @@ import Ece from '../components/branches/ece';
 import Eee from '../components/branches/eee';
 import Chemical from '../components/branches/chemical';
 import Librarian_login from '../components/signin/librarian_login';
+import Library_add from '../components/librarian_features/library_add';
+import Librarian_navbar from '../components/librarian_features/librarian_navbar';
 
 
 export {Home,
@@ -18,4 +20,4 @@ Register,
 Sign_in,
 Contact,
 About,
-Branches,Cse,Civil,Eee,Chemical,Ece,Mechanical,Librarian_login}
+Branches,Cse,Civil,Eee,Chemical,Ece,Mechanical,Librarian_login,Library_add,Librarian_navbar}

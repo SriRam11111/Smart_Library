@@ -1,0 +1,57 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black')
+
+//Utilizing SASS variable functionality to apply color scheme
+$lightgray: #F7F9F9
+$bluegray: #BED8D4
+
+
+html, body
+  height: 100%
+ 
+  
+body
+  background: white
+  display: flex
+  justify-content: center
+  align-items: center
+  font-family: Helvetica Neue
+  
+h1
+  font-size: 4em
+  font-weight: bold 
+  color: darkslategray
+  font-family: 'Archivo Black'
+ 
+.form
+  height: 35%
+  border: 5px solid $bluegray
+  border-radius: 20%
+  margin-top: 1em
+  text-align: center
+  justify-content: center
+  flex-direction: column
+  background-color: $lightgray
+  display: flex
+  padding: 45px
+
+.inputcontainer
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  
+input
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 5px
+  
+button
+  justify-content: center
+  align-items: center
+  margin: 2em
+  
+  
+ 

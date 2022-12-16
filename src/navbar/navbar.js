@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
 import './navbar.css'
 import {Home,Register,Sign_in,Contact,About,Branches,
-	Cse,Civil,Eee,Chemical,Ece,Mechanical,Librarian_login} from './index'
+	Cse,Civil,Eee,Chemical,Ece,Mechanical,Librarian_login,Librarian_navbar,Library_add} from './index'
 
 
 
@@ -129,6 +129,8 @@ function NavBar() {
 						<Route path="/chem" component={Chemical} />
 						<Route path="/ece" component={Ece} />
 						<Route path="/librarian_login" component={Librarian_login} />
+						<Route path="/library_add" component={Library_add} />
+						<Route path="/librarian_navbar" component={Librarian_navbar} />
 					</Switch>
 				</div>
 			</Router>

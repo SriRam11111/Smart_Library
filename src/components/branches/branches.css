@@ -1,13 +1,16 @@
 .branchesforlibrary{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  grid-gap:5%;
-  /* justify-content: space-around;  
-  align-content: space-around;   */
+  display: flex;
+ flex-direction: column;
+ align-items: center;
 }
 .branches-child{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 30px;
   padding: .5em;
+  margin: 1%;
+  width :10%;
   color: #ffffff;
   background: #1c87c9;
   text-align: center;

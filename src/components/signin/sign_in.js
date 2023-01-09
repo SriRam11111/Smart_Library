@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from "react";
-import { Redirect } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './signin.css'
 /**
  * page to sign into the website
@@ -11,6 +11,7 @@ function Sign_in() {
   const [uid, setUid] = useState("")
   const [password, setPassword] = useState("")
   const [loginSucessful, setLoginSucessful] = useState(false)
+  const navigate = useNavigate();
 
   const handleInput = (event) => {
     switch (event.target.name) {
@@ -27,7 +28,8 @@ function Sign_in() {
     }
   }
   if (loginSucessful) {
-    return <Redirect to="/branches" />
+    //return <Redirect to="/branches" />
+    navigate("/branches");
   }
 
   const handleSubmit = (event) => {

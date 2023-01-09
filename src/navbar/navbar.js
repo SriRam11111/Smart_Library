@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route ,NavLink} from 'react-router-dom';
 import './navbar.css'
 import {Home,Register,Sign_in,Contact,About,Branches,
 	Cse,Civil,Eee,Chemical,Ece,Mechanical,Librarian_login,Librarian_navbar,Library_add} from './index'
@@ -7,7 +7,7 @@ import {Home,Register,Sign_in,Contact,About,Branches,
 
 
 /**
- * navbar to show everytime divided as a seperate component
+ * navbar to show everytime divided as a seperate element
  * @returns 
  */
 function NavBarContent() {
@@ -115,23 +115,23 @@ function NavBar() {
 			<Router>
 				<NavBarContent />
 				<div className="pages">
-					<Switch>
-						<Route exact path="/" component={Home} />
-						<Route path="/register" component={Register} />
-						<Route path="/sign-in" component={Sign_in} />
-						<Route path="/contact" component={Contact} />
-						<Route path="/about" component={About} />
-						<Route path="/branches" component={Branches} />
-						<Route path="/civil" component={Civil} />
-						<Route path="/mech" component={Mechanical} />
-						<Route path="/cse" component={Cse} />
-						<Route path="/eee" component={Eee} />
-						<Route path="/chem" component={Chemical} />
-						<Route path="/ece" component={Ece} />
-						<Route path="/librarian_login" component={Librarian_login} />
-						<Route path="/library_add" component={Library_add} />
-						<Route path="/librarian_navbar" component={Librarian_navbar} />
-					</Switch>
+					<Routes>
+						<Route exact path="/" element={<Home/>} />
+						<Route path="/register" element={<Register/>} />
+						<Route path="/sign-in" element={<Sign_in/>} />
+						<Route path="/contact" element={<Contact/>} />
+						<Route path="/about" element={<About/>} />
+						<Route path="/branches" element={<Branches/>} />
+						<Route path="/civil" element={<Civil/>} />
+						<Route path="/mech" element={<Mechanical/>} />
+						<Route path="/cse" element={<Cse/>} />
+						<Route path="/eee" element={<Eee/>} />
+						<Route path="/chem" element={<Chemical/>} />
+						<Route path="/ece" element={<Ece/>} />
+						<Route path="/librarian_login" element={<Librarian_login/>} />
+						<Route path="/library_add" element={<Library_add/>} />
+						<Route path="/librarian_navbar" element={<Librarian_navbar/>} />
+					</Routes>
 				</div>
 			</Router>
 		</>
